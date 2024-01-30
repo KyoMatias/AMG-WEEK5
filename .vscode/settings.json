@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Activity5.sln"
+    "dotnet.defaultSolution": "AMG-WEEK5.sln"
 }

@@ -18,11 +18,11 @@ MonoBehaviour:
     value: 1
   spectralLut:
     overrideState: 1
-    value: {fileID: 0}
+    value: {fileID: 2800000, guid: 85ac55597b97403c82fc6601a93cf241, type: 3}
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.092
+    value: 0.204
   fastMode:
     overrideState: 1
     value: 0
@@ -42,6 +42,41 @@ MonoBehaviour:
   - {fileID: 4022929340012238528}
   - {fileID: -7236709191746654201}
   - {fileID: 7489925787907778101}
+  - {fileID: 2698845246605480880}
+--- !u!114 &2698845246605480880
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b77c5407dc277943b591ade9e6b18c5, type: 3}
+  m_Name: LensDistortion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: -19.1
+  intensityX:
+    overrideState: 1
+    value: 1
+  intensityY:
+    overrideState: 1
+    value: 1
+  centerX:
+    overrideState: 1
+    value: 0
+  centerY:
+    overrideState: 1
+    value: 0
+  scale:
+    overrideState: 1
+    value: 1
 --- !u!114 &4022929340012238528
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -110,10 +145,10 @@ MonoBehaviour:
     value: 0
   intensity:
     overrideState: 1
-    value: 0.468
+    value: 0.754
   size:
     overrideState: 1
-    value: 1.11
+    value: 1.12
   lumContrib:
     overrideState: 1
-    value: 0.8
+    value: 1
