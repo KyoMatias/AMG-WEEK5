@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ShooterMechanic : MonoBehaviour
 {
-     private Transform m_bullet;
+     public GameObject Bullet;
+    [SerializeField] private Transform m_bulletRoot;
     [SerializeField] private Transform m_playerTransform;
 
     float currentTime;
@@ -21,7 +22,13 @@ public class ShooterMechanic : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject cloneBullet = Instantiate(Bullet, m_bulletRoot.position, Quaternion.identity);
+            Bullet bullet = cloneBullet.GetComponent<Bullet>();
+            bullet.SetDirection(transform.forward);
+        }
+
     }
 
 

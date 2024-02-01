@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private Transform m_bullet;
+/*    [SerializeField] private Transform m_bullet;
     [SerializeField] private Transform m_playerTransform;
     [SerializeField] private Transform m_worldPoint;
-    [SerializeField] private float m_time;
+    [SerializeField] private float m_time;*/
 
 
     [SerializeField] private GameObject bullet;
-    private bool is_shot;
-    float currentTime;
-
-    public delegate void Shoot();
-    public static Shoot bulletshoot;
+    Vector3 Direction;
 
 
     void Start()
@@ -28,6 +24,11 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-    
+        transform.Translate(Direction * 10 * Time.deltaTime);
+    }
+
+    public void SetDirection(Vector3 Dir)
+    {
+        Direction = Dir;
     }
 }
