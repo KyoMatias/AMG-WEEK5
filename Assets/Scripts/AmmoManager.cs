@@ -8,7 +8,7 @@ public class AmmoManager : MonoBehaviour
     public int MaxAmmoCount;
     private static int currentAmmoCount;
     public int ammo;
-
+    private bool OutOfAmmo;
     public delegate void Bullet();
 
     public static Bullet useAmmo;
@@ -25,16 +25,12 @@ public class AmmoManager : MonoBehaviour
     void Update()
     {
         CheckAmmo();
-        Debug.Log($"The Current Ammo Count is: {UseAmmo(0)}");
         ammoUI.text = currentAmmoCount.ToString();
 
     }
 
     void CheckAmmo()
     {
-        
-        bool OutOfAmmo;
-        
         if (currentAmmoCount <= MaxAmmoCount)
         {
             OutOfAmmo = false;
