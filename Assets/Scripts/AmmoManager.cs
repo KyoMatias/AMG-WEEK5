@@ -6,12 +6,13 @@ using UnityEngine;
 public class AmmoManager : MonoBehaviour
 {
     public int MaxAmmoCount;
-    private static int currentAmmoCount;
+    public static int currentAmmoCount;
     public int ammo;
     private bool OutOfAmmo;
     public delegate void Bullet();
 
     public static Bullet useAmmo;
+    
     [SerializeField] private TextMeshProUGUI ammoUI;
     
     // Start is called before the first frame update
@@ -31,18 +32,15 @@ public class AmmoManager : MonoBehaviour
 
     void CheckAmmo()
     {
-        if (currentAmmoCount <= MaxAmmoCount)
-        {
-            OutOfAmmo = false;
-            //Invoke a function here to make player's gun able to shoot.
-        }
         
-        else if (currentAmmoCount == 0)
+        if (currentAmmoCount == 0)
         {
             OutOfAmmo= true;
-            //Invoke a function here to stop the player from shooting
             //- and add a yield return new Waitforseconds() variable for reload.
         }
+
+        OutOfAmmo = false;
+        
     }
     
     
@@ -55,6 +53,12 @@ public class AmmoManager : MonoBehaviour
     void Fired()
     {
         UseAmmo(1);
+    }
+
+    public static int AddAmmo(int Ammo)
+    {
+        currentAmmoCount = Ammo;
+        return currentAmmoCount;
     }
     
 }
