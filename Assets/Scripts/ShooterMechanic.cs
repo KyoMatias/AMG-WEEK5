@@ -28,11 +28,16 @@ public class ShooterMechanic : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             AmmoManager.useAmmo?.Invoke();
-            GameObject cloneBullet = Instantiate(Bullet, m_bulletRoot.position, Quaternion.identity);
-            Bullet bullet = cloneBullet.GetComponent<Bullet>();
-            bullet.SetDirection(transform.forward);
+            FireFunction();
         }
 
+    }
+
+    void FireFunction()
+    {
+        GameObject cloneBullet = Instantiate(Bullet, m_bulletRoot.position, Quaternion.identity);
+        Bullet bullet = cloneBullet.GetComponent<Bullet>();
+        bullet.SetDirection(transform.forward);
     }
     
 
