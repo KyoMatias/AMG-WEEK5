@@ -21,7 +21,11 @@ public class ShooterMechanic : MonoBehaviour
 
     void Update()
     {
-        
+        if(Input.GetButtonDown("Fire1"))
+        {
+             Ray ray;
+               //ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        }
     }
 
 

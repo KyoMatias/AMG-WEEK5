@@ -8,6 +8,7 @@ public class MenuBehaviour : MonoBehaviour
     [SerializeField] private GameObject m_mainCamera;
      [SerializeField] private GameObject m_menuCamera;
      [SerializeField] private GameObject m_menuUI;
+     [SerializeField] private GameObject PlayerUI;
 
     [SerializeField]private Animator camerapan;
     [SerializeField] private Animator menupan;
@@ -20,6 +21,7 @@ public class MenuBehaviour : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         m_menuCamera.SetActive(true);
         m_mainCamera.SetActive(false);
+        PlayerUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class MenuBehaviour : MonoBehaviour
         m_mainCamera.SetActive(true);
         m_menuCamera.SetActive(false);
         m_menuUI.SetActive(false);
+        PlayerUI.SetActive(true);
         yield return null;
     }
 
