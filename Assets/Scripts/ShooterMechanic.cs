@@ -57,6 +57,7 @@ public class ShooterMechanic : MonoBehaviour
             GameObject cloneBullet = Instantiate(Bullet, m_bulletRoot.position, Quaternion.identity);
             Bullet bullet = cloneBullet.GetComponent<Bullet>();
             bullet.SetDirection(transform.forward);
+
         }
         else if (count == 0)
         {

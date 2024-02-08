@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MenuBehaviour : MonoBehaviour
 {
-
-    [SerializeField] private GameObject m_mainCamera;
+    [SerializeField]private AudioSource m_startgame;
+    //[SerializeField]private AudioSource m_ambient;
+     [SerializeField] private GameObject m_mainCamera;
      [SerializeField] private GameObject m_menuCamera;
      [SerializeField] private GameObject m_menuUI;
      [SerializeField] private GameObject PlayerUI;
@@ -22,6 +23,7 @@ public class MenuBehaviour : MonoBehaviour
         m_menuCamera.SetActive(true);
         m_mainCamera.SetActive(false);
         PlayerUI.SetActive(false);
+        m_startgame.Pause();
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class MenuBehaviour : MonoBehaviour
         camerapan.Play("camerapan");
         menupan.Play("StowAway");
         StartCoroutine(ActivatePlayerCam());
+        m_startgame.Play(0);
     }
 
     IEnumerator ActivatePlayerCam()

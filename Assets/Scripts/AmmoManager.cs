@@ -13,6 +13,8 @@ public class AmmoManager : MonoBehaviour
 
     public static Bullet useAmmo;
     
+    
+    
     [SerializeField] private TextMeshProUGUI ammoUI;
     
     // Start is called before the first frame update
@@ -53,6 +55,7 @@ public class AmmoManager : MonoBehaviour
     void Fired()
     {
         UseAmmo(1);
+        
     }
 
     public static int AddAmmo(int Ammo)
