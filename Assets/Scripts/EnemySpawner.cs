@@ -10,7 +10,6 @@ public class EnemySpawner : MonoBehaviour
     static bool startGame;
 
     public delegate void Initilalize(bool value);
-
     public static event Initilalize start;
     private void Awake()
     {

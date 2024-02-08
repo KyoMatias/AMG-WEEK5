@@ -62,6 +62,7 @@ public class AmmoManager : MonoBehaviour
     {
         currentAmmoCount = Ammo;
         return currentAmmoCount;
+        //Returns the Current Ammo Count as the Specified Load Amount (Default Count is : 30).
     }
     
 }

@@ -31,4 +31,11 @@ public class Player : MonoBehaviour
 		Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
 		transform.rotation = localRotation;
 	}
+
+    void CheckPlayerStatus()
+    {
+        Debug.Log("Player Status Is Alive");
+    }
+
+
 }
